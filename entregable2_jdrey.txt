@@ -1,0 +1,45 @@
+¿Qué hace o cuál es el objetivo de un Git Status?
+Es un comando git (git status [<options>…​] [--] [<pathspec>…​]) que dispone en pantalla el estado del repositorio, mostrando los cambios que están preparados para subir al repositorio, los que no y los que se ignorarán.
+
+¿Que hace un Git Push?
+Es un comando git (git push) usado para subir o actualizar el repositorio local a uno remoto. Se cargarán únicamente aquellos arhivos que se han realizado commit, esto puede crear o sobrescribir archivos. Existen distintas opciones para ejecutar git push dependiendo de sus banderas, las siguientes son todas las opciones disponibles: 
+git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=<git-receive-pack>]
+	   [--repo=<repository>] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]
+	   [-u | --set-upstream] [-o <string> | --push-option=<string>]
+	   [--[no-]signed|--signed=(true|false|if-asked)]
+	   [--force-with-lease[=<refname>[:<expect>]]]
+	   [--no-verify] [<repository> [<refspec>…​]]
+
+¿Cuál es el comando para crear un branch?
+El comando "git branch" nos sirve para poder crear una rama o branch del repositorio en el cual nos hemos ubicado. Para poder corroborar la creación de estos branchs si ejecutamos por medio de consola el comando git show-branch los listaremos todos. El siguiente es el listado de todas las posibles opciones de este comando:
+git branch [--color[=<when>] | --no-color] [--show-current]
+	[-v [--abbrev=<length> | --no-abbrev]]
+	[--column[=<options>] | --no-column] [--sort=<key>]
+	[--merged [<commit>]] [--no-merged [<commit>]]
+	[--contains [<commit>]] [--no-contains [<commit>]]
+	[--points-at <object>] [--format=<format>]
+	[(-r | --remotes) | (-a | --all)]
+	[--list] [<pattern>…​]
+git branch [--track | --no-track] [-f] <branchname> [<start-point>]
+git branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]
+git branch --unset-upstream [<branchname>]
+git branch (-m | -M) [<oldbranch>] <newbranch>
+git branch (-c | -C) [<oldbranch>] <newbranch>
+git branch (-d | -D) [-r] <branchname>…​
+git branch --edit-description [<branchname>]
+
+¿Cuál es el comando para consultar los branch existentes?
+El comando básico para hacerlo es el siguiente: git show-branch, el cual mostrará los rammas con sus commits de forma ancestral jerárquicamente. Git ofrece distintas opciones para poder uso preciso de este comando:
+git show-branch [-a|--all] [-r|--remotes] [--topo-order | --date-order]
+		[--current] [--color[=<when>] | --no-color] [--sparse]
+		[--more=<n> | --list | --independent | --merge-base]
+		[--no-name | --sha1-name] [--topics]
+		[(<rev> | <glob>)…​]
+git show-branch (-g|--reflog)[=<n>[,<base>]] [--list] [<ref>]
+
+¿Cuál es el objetivo de un git remote add?
+Tiene como objetivo este comando poder cargar nuestro proyecto local (carpetas y archivos) a nuestro repositorio remoto. La ejecución de este comando por consola es la siguiente:
+git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=(fetch|push)] <name> <url>
+Donde name es el nombre de nuestro proyecto local y url es la ubicación de nuestro repositorio remoto.
+
+Referencias externas: https://git-scm.com/doc
